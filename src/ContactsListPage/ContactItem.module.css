@@ -5,6 +5,7 @@
     justify-content: space-around;
     padding: 10px 0px;
     text-align: center;
+    cursor: pointer;
 }
 
 .avatar, .name, .phone, .email {

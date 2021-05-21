@@ -3,6 +3,7 @@ import Button from "@material-ui/core/Button";
 import ClearIcon from "@material-ui/icons/Clear";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import styles from "./ContactItem.module.css";
+import { useHistory } from "react-router";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -18,10 +19,15 @@ interface IContactItem {
 
 export const ContactItem = ({ contact }: IContactItem) => {
   const classes = useStyles();
-  const { lastname, firstname, middlename, avatar, email, phone } = contact;
-  console.log(contact);
+  const history = useHistory();
+  const { id, lastname, firstname, middlename, avatar, email, phone } = contact;
+  
+  const handleDbClick = (id: string) => {
+    history.push(`/${id}`)
+  }
+
   return (
-    <div className={styles.item}>
+    <div onDoubleClick={() => handleDbClick(id)} className={styles.item}>
       <div className={styles.avatar}>{avatar}</div>
       <div className={styles.name}>{`${lastname} ${firstname} ${middlename}`}</div>
       <div className={styles.phone}>{phone}</div>
