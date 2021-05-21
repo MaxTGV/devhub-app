@@ -21,12 +21,15 @@ export const ContactsListPage = () => {
   }
 
   return (
-    <div className={styles.table}>
-      <Header />
-      {contacts &&
-        contacts.map((contact) => (
-          <ContactItem key={contact.id} contact={contact} />
-        ))}
-    </div>
+    <>
+      <h1>Адресная книга</h1>
+      <div className={styles.table}>
+        <Header />
+        {contacts &&
+          contacts.map((contact) => (
+            <ContactItem key={contact.id} contact={contact} />
+          ))}
+      </div>
+    </>
   );
 };

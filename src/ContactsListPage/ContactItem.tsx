@@ -28,7 +28,7 @@ export const ContactItem = ({ contact }: IContactItem) => {
 
   return (
     <div onDoubleClick={() => handleDbClick(id)} className={styles.item}>
-      <div className={styles.avatar}>{avatar}</div>
+      <img className={styles.avatar} alt={avatar}/>
       <div className={styles.name}>{`${lastname} ${firstname} ${middlename}`}</div>
       <div className={styles.phone}>{phone}</div>
       <div className={styles.email}>{email}</div>
