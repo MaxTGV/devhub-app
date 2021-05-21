@@ -16,6 +16,10 @@ export const ContactsListPage = () => {
     fetchContactsList();
   }, []);
 
+  if (!contacts) {
+    return <h1>Loading...</h1>;
+  }
+
   return (
     <div className={styles.table}>
       <Header />
