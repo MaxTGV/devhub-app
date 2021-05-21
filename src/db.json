@@ -1,0 +1,13 @@
+{
+    "contacts": [
+        {
+            "id": "1",
+            "lastname": "Ivanov",
+            "firsname": "Ivan",
+            "midllename": "Ivanovich",
+            "avatar": "none",
+            "email": "ivanov@mail.ru",
+            "phone": "+7-908-111-12-13" 
+        }
+    ]
+}
