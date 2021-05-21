@@ -1,0 +1,17 @@
+.item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5% 30% 20% 25% 15% ;
+    justify-content: space-around;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.avatar, .name, .phone, .email {
+    border: 1px solid black;
+    padding: 20px 0px;
+}
+
+.button {
+    border: 1px solid black;
+}

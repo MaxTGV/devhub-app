@@ -1,3 +1,7 @@
 .app {
   text-align: left;
 }
+
+.app h1 {
+  margin: 20px 0px; 
+}
