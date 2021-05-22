@@ -1,6 +1,8 @@
 import { Form, Field } from "react-final-form";
-import { addContactData } from "../shared/api";
+import { useDispatch } from "react-redux";
 import { getRandomId } from "../shared/getRandomId";
+import { addContact } from "../state/contactsSlice";
+import { setModal } from "../state/modalSlice";
 import styles from "./ModalForm.module.css";
 
 interface IModalForm {
@@ -11,19 +13,24 @@ interface IModalForm {
 }
 
 export const ModalForm = () => {
+  const dispatch = useDispatch();
+
   const onSubmit = async (data: IModalForm) => {
     const { fullname, phone, email, avatar } = data;
-
     const str = fullname.split(" ");
-    await addContactData({
-      id: String(getRandomId()),
-      lastname: str[0],
-      firstname: str[1],
-      middlename: str[2],
-      avatar,
-      email,
-      phone,
-    });
+
+    dispatch(
+      addContact({
+        id: String(getRandomId()),
+        lastname: str[0],
+        firstname: str[1],
+        middlename: str[2],
+        avatar,
+        email,
+        phone,
+      })
+    );
+    dispatch(setModal(false));
   };
 
   return (

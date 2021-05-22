@@ -1,14 +1,17 @@
 import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setModal } from "../state/modalSlice";
+import { getModal } from "../state/selectors";
 import styles from "./Header.module.css";
 import { ModalForm } from "./ModalForm";
 
 export const Header = () => {
-  const [modal, setModal] = useState<boolean>(false);
+  const dispatch = useDispatch();
+  const modal = useSelector(getModal);
 
   const handleClick = () => {
-    setModal(!modal);
+    dispatch(setModal(true));
   };
 
   return (

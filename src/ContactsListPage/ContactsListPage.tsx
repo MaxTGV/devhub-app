@@ -1,20 +1,11 @@
-import { useEffect, useState } from "react";
-import { Contacts } from "../types";
-import { getContactsList } from "../shared/api";
 import { Header } from "./Header";
 import { ContactItem } from "./ContactItem";
 import styles from "./ContactsListPage.module.css";
+import { useSelector } from "react-redux";
+import { getContacts } from "../state/selectors";
 
 export const ContactsListPage = () => {
-  const [contacts, setContacts] = useState<Contacts[]>();
-
-  useEffect(() => {
-    const fetchContactsList = async () => {
-      const data = await getContactsList();
-      setContacts(data);
-    };
-    fetchContactsList();
-  }, []);
+  const contacts = useSelector(getContacts);
 
   if (!contacts) {
     return <h1>Loading...</h1>;
