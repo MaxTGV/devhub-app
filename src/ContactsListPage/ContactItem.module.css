@@ -9,8 +9,15 @@
 }
 
 .avatar, .name, .phone, .email {
-    border: 1px solid black;
-    padding: 20px 0px;
+    border: 1px solid black;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar {
+    width: 50px;
+    height: 59px;
 }
 
 .button {

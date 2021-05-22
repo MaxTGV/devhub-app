@@ -15,7 +15,7 @@ export const ContactName = ({
 }: IContactName) => {
   return (
     <div className={styles.wrapper}>
-      <img className={styles.avatar} src="#" alt={avatar}/>
+      <img className={styles.avatar} src={avatar} alt={lastname}/>
       <div className={styles.fullname}>{`${lastname} ${firstname} ${middlename}`}</div>
     </div>
   );
