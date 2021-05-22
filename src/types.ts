@@ -1,5 +1,5 @@
 export type Contacts = {
-    id: "1",
+    id: string,
     lastname: string
     firstname: string
     middlename: string

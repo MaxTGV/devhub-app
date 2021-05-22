@@ -1,0 +1,40 @@
+.modal {
+    width: 300px;
+    position: absolute;
+    left: 30%;
+    background-color: white;
+    border: 1px solid black;
+    z-index: 10;
+}
+
+form {
+    max-width: 500px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+form > div {
+      display: flex;
+      flex-flow: row nowrap;
+      line-height: 2em;
+      margin: 15px 0px;
+}
+
+form > div > input {
+    flex: 1;
+    padding: 3px 5px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+}
+
+.buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-top: 15px;
+    border: 1px solid black;
+  }
+  button {
+    margin: 0 10px;
+  }
